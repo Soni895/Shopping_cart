@@ -8,7 +8,8 @@ const CartItem = ({item}) => {
   <div>
   <p>{item.price}</p>
   <button>
-     <AiTwotoneDelete/>
+  <span><AiTwotoneDelete/></span>
+     
   </button>
   </div>
   </div>
