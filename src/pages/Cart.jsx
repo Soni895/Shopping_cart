@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 const Cart = () => {
   const [totalamount,settotalamount]=useState(0);
   const {cart}=useSelector((state)=>state);
+  
 
   useEffect(
 ()=>
@@ -19,7 +20,7 @@ const Cart = () => {
       <div>
       <div>
       {
-      Cart.map(
+      cart.map(
            (item)=>(<CartItem item={item} key={item.id} index={item.index}></CartItem>)
       )
       }
@@ -55,3 +56,4 @@ const Cart = () => {
 };
 
 export default Cart;
+
