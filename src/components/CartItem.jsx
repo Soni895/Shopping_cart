@@ -1,5 +1,8 @@
-const CartItem = () => {
-  return <div>CartItem</div>;
+const CartItem = ({item}) => {
+  return <div>
+
+    
+  </div>;
 };
 
 export default CartItem;
