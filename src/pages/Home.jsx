@@ -3,8 +3,11 @@ import {  toast } from 'react-toastify';
 import Spinner from "../components/Spinner";
 import Product from "../components/Product";
 
+
 const Home = () => {
- const API_URL = "https://fakestoreapi.com/products";
+  const API_URL = "https://fakestoreapi.com/products";
+  const [loading, setloading] = useState(false);
+  const [data, setdata] = useState([]);
 async function datafatch()
 {
   setloading(true);
@@ -26,12 +29,15 @@ try{
   }
   setloading(false);
 }
-const [data,setdata]=useState([]);
-const [loading ,setloading]=useState([]);
-useEffect(
-()=>datafatch(),[]);
 
-  return <div>
+
+useEffect(
+  ()=>{
+    datafatch();
+  },[]
+);
+
+  return (<div>
 {
   loading?(<Spinner></Spinner>):(
   data.length>0 ?(
@@ -47,7 +53,9 @@ useEffect(
 }
 
 
-  </div>;
+  </div>);
 };
 
 export default Home;
+
+
