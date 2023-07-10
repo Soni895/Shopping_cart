@@ -31,7 +31,7 @@ toast.error("Item Remove To your Cart",{
 <p>{item.price}</p>
 
   {
-    cart.some((p) => p.id == item.id) ? (<button  onClick={removefromcart} >Remove Item</button>):(<button onClick={addtocart}>Add To Cart</button>)
+    cart.some((p) => p.id === item.id) ? (<button  onClick={removefromcart} >Remove Item</button>):(<button onClick={addtocart}>Add To Cart</button>)
   }
 
 
