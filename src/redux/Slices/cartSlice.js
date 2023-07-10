@@ -5,13 +5,15 @@ name:"cart",
 initialState:[],
 reducers:{
 
-    add()
+    add:(state,actions)=>
     {
+        state.push(actions.payload);
 
     },
-    remove()
+    remove:(state,action)=>
     {
 
+return state.filter((item)=>item.id!=action.payload)
     }
 }
 
