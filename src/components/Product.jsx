@@ -41,23 +41,6 @@ toast.error("Item Remove To your Cart",{
 export default Product;
 
 
-// import { useDispatch, useSelector } from "react-redux";
-// import {add ,remove} from "../redux/Slices/cartSlice";
-
-// const Product = ({post}) => {
-
-//   const {cart} = useSelector((state) => state);
-//   const dispatch = useDispatch();
-
-//   const addToCart = () => {
-//     dispatch(add(post));
-//     toast.success("Item added to Cart");
-//   }
-
-//   const removeFromCart = () => {
-//     dispatch(remove(post.id));
-//     toast.error("Item removed from Cart");
-//   }
 
 //   return (
 //     <div className="flex flex-col items-center justify-between 
